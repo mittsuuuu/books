@@ -11,14 +11,16 @@
           <template v-for="book in row" :key="book.id">
             <div 
               class="book-item mb-4" 
-              v-if="!(selectedBook && selectedBook.id === book.id && expandedRowIndex === rowIndex)"
             >
-              <div 
-                class="card"
-                @click="toggleBookDetail(book, rowIndex)"
-              >
-                <img :src="book.imageUrl" class="card-img-top" :alt="book.title">
-              </div>
+              <transition name="book-card-fade-slide">
+                <div 
+                  class="card"
+                  @click="toggleBookDetail(book, rowIndex)"
+                  v-show="!(selectedBook && selectedBook.id === book.id && expandedRowIndex === rowIndex)"
+                >
+                  <img :src="book.imageUrl" class="card-img-top" :alt="book.title">
+                </div>
+              </transition>
             </div>
           </template>
         </transition-group>
@@ -127,22 +129,23 @@ onBeforeUnmount(() => {
 }
 
 /* --- Transition for the book item itself --- */
-.book-item-fade-move,
-.book-item-fade-enter-active,
-.book-item-fade-leave-active {
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+.book-card-fade-slide-leave-active {
+  transition: all 0.5s ease-out;
 }
 
-.book-item-fade-enter-from,
-.book-item-fade-leave-to {
+.book-card-fade-slide-leave-to {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(50px);
 }
 
-.book-item-fade-leave-active {
-  position: absolute;
+.book-card-fade-slide-enter-active {
+  transition: all 0.5s ease-in;
 }
 
+.book-card-fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(50px);
+}
 
 /* --- Transition for Expansion --- */
 .expand-enter-active,
