@@ -44,7 +44,7 @@ import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import BookDetailExpanded from './components/BookDetailExpanded.vue';
 
 // --- Data Fetching ---
-const { data: books, pending, error } = useFetch('/books.json', {
+const { data: books, pending, error } = useFetch('./books.json', {
   lazy: true,
   server: false
 });
