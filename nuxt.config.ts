@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     // 例: https://<username>.github.io/books/
     baseURL: '/books/', // ローカル確認用に相対パスに変更
     // アセットのパス (デフォルト値だが明示的に指定)
-    buildAssetsDir: '_nuxt'
+    //buildAssetsDir: '_nuxt'
   },
 
   // 開発ツールを有効化
