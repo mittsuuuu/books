@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "title": "Book Title 1",
-    "author": "Author 1",
+    "title": "後悔しない時間の使い方",
+    "author": "ティボ・ムリス",
     "description": "This is a short description of the first book. It gives a glimpse into the content.",
-    "imageUrl": "/images/book1.png",
+    "imageUrl": "./images/book1.png",
     "rating": 4,
-    "review": "A fantastic read! Highly recommended.",
+    "review": "各章において，紹介されている<br>方法の実践練習がエクササイズとして乗っているのが良い．    方法に対する例が抽象的です",
     "amazonLink": "#"
   },
   {
@@ -14,7 +14,7 @@
     "title": "Book Title 2",
     "author": "Author 2",
     "description": "Here is a brief summary of the second book, highlighting its main themes and plot.",
-    "imageUrl": "https://via.placeholder.com/300x300.png?text=Book+2",
+    "imageUrl": "./images/book2.png",
     "rating": 5,
     "review": "Couldn't put it down!",
     "amazonLink": "#"
@@ -31,12 +31,12 @@
   },
   {
     "id": 4,
-    "title": "Book Title 4",
+    "title": "スマホ脳",
     "author": "Author 4",
     "description": "This is a description for the fourth book, designed to pique the reader's interest.",
     "imageUrl": "https://via.placeholder.com/300x300.png?text=Book+4",
     "rating": 4,
-    "review": "A solid read.",
+    "review": "スマホを使用しているとどうなるか，参考文献付きで紹介されている",
     "amazonLink": "#"
   },
   {

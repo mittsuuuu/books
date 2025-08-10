@@ -6,9 +6,9 @@
       </div>
       <div class="col-md-8">
         <h3>{{ book.title }}</h3>
-        <p><strong>Author:</strong> {{ book.author }}</p>
-        <p><strong>Rating:</strong> <span v-for="n in 5" :key="n" class="star">{{ n <= book.rating ? '★' : '☆' }}</span></p>
-        <p><strong>Review:</strong> {{ book.review }}</p>
+        <p><strong>著者:</strong> {{ book.author }}</p>
+        <p><strong>評価:</strong> <span v-for="n in 5" :key="n" class="star">{{ n <= book.rating ? '★' : '☆' }}</span></p>
+        <p><strong>感想:</strong> <span v-html="book.review"></span></p>
         <a :href="book.amazonLink" class="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer">View on Amazon</a>
         <button class="btn btn-secondary mt-3 ms-2" @click="$emit('close')">Close</button>
       </div>
